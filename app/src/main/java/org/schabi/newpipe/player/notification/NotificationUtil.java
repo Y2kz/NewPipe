@@ -1,7 +1,6 @@
 package org.schabi.newpipe.player.notification;
 
 import android.annotation.SuppressLint;
-import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.ServiceInfo;
 import android.graphics.Bitmap;
@@ -22,8 +21,11 @@ import org.schabi.newpipe.R;
 import org.schabi.newpipe.player.Player;
 import org.schabi.newpipe.player.mediasession.MediaSessionPlayerUi;
 import org.schabi.newpipe.util.NavigationHelper;
+import org.schabi.newpipe.util.PendingIntentCompat;
 
 import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 
 import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
 import static androidx.media.app.NotificationCompat.MediaStyle;
@@ -40,8 +42,6 @@ import static org.schabi.newpipe.player.notification.NotificationConstants.ACTIO
 
 /**
  * This is a utility class for player notifications.
- *
- * @author cool-student
  */
 public final class NotificationUtil {
     private static final String TAG = NotificationUtil.class.getSimpleName();
@@ -77,6 +77,19 @@ public final class NotificationUtil {
         }
         updateNotification();
         notificationManager.notify(NOTIFICATION_ID, notificationBuilder.build());
+    }
+
+    public synchronized void updateThumbnail() {
+        if (notificationBuilder != null) {
+            if (DEBUG) {
+                Log.d(TAG, "updateThumbnail() called with thumbnail = [" + Integer.toHexString(
+                        Optional.ofNullable(player.getThumbnail()).map(Objects::hashCode).orElse(0))
+                        + "], title = [" + player.getVideoTitle() + "]");
+            }
+
+            setLargeIcon(notificationBuilder);
+            notificationManager.notify(NOTIFICATION_ID, notificationBuilder.build());
+        }
     }
 
     private synchronized NotificationCompat.Builder createNotification() {
@@ -120,8 +133,11 @@ public final class NotificationUtil {
                         R.color.dark_background_color))
                 .setColorized(player.getPrefs().getBoolean(
                         player.getContext().getString(R.string.notification_colorize_key), true))
-                .setDeleteIntent(PendingIntent.getBroadcast(player.getContext(), NOTIFICATION_ID,
-                        new Intent(ACTION_CLOSE), FLAG_UPDATE_CURRENT));
+                .setDeleteIntent(PendingIntentCompat.getBroadcast(player.getContext(),
+                        NOTIFICATION_ID, new Intent(ACTION_CLOSE), FLAG_UPDATE_CURRENT));
+
+        // set the initial value for the video thumbnail, updatable with updateNotificationThumbnail
+        setLargeIcon(builder);
 
         return builder;
     }
@@ -135,14 +151,13 @@ public final class NotificationUtil {
         }
 
         // also update content intent, in case the user switched players
-        notificationBuilder.setContentIntent(PendingIntent.getActivity(player.getContext(),
+        notificationBuilder.setContentIntent(PendingIntentCompat.getActivity(player.getContext(),
                 NOTIFICATION_ID, getIntentForNotification(), FLAG_UPDATE_CURRENT));
         notificationBuilder.setContentTitle(player.getVideoTitle());
         notificationBuilder.setContentText(player.getUploaderName());
         notificationBuilder.setTicker(player.getVideoTitle());
 
         updateActions(notificationBuilder);
-        setLargeIcon(notificationBuilder);
     }
 
 
@@ -319,7 +334,7 @@ public final class NotificationUtil {
                                                 @StringRes final int title,
                                                 final String intentAction) {
         return new NotificationCompat.Action(drawable, player.getContext().getString(title),
-                PendingIntent.getBroadcast(player.getContext(), NOTIFICATION_ID,
+                PendingIntentCompat.getBroadcast(player.getContext(), NOTIFICATION_ID,
                         new Intent(intentAction), FLAG_UPDATE_CURRENT));
     }
 

@@ -42,6 +42,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.appcompat.widget.PopupMenu;
+import androidx.core.graphics.BitmapCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.math.MathUtils;
 import androidx.core.view.ViewCompat;
@@ -109,7 +110,6 @@ public abstract class VideoPlayerUi extends PlayerUi
     private final Handler controlsVisibilityHandler = new Handler(Looper.getMainLooper());
     @Nullable private SurfaceHolderCallback surfaceHolderCallback;
     boolean surfaceIsSetup = false;
-    @Nullable private Bitmap thumbnail = null;
 
 
     /*//////////////////////////////////////////////////////////////////////////
@@ -385,9 +385,7 @@ public abstract class VideoPlayerUi extends PlayerUi
     @Override
     public void destroy() {
         super.destroy();
-        if (binding != null) {
-            binding.endScreen.setImageBitmap(null);
-        }
+        binding.endScreen.setImageDrawable(null);
         deinitPlayerSeekOverlay();
         deinitListeners();
     }
@@ -422,12 +420,10 @@ public abstract class VideoPlayerUi extends PlayerUi
     public void onBroadcastReceived(final Intent intent) {
         super.onBroadcastReceived(intent);
         if (Intent.ACTION_CONFIGURATION_CHANGED.equals(intent.getAction())) {
-            // When the orientation changed, the screen height might be smaller.
-            // If the end screen thumbnail is not re-scaled,
-            // it can be larger than the current screen height
-            // and thus enlarging the whole player.
-            // This causes the seekbar to be ouf the visible area.
-            updateEndScreenThumbnail();
+            // When the orientation changes, the screen height might be smaller. If the end screen
+            // thumbnail is not re-scaled, it can be larger than the current screen height and thus
+            // enlarging the whole player. This causes the seekbar to be out of the visible area.
+            updateEndScreenThumbnail(player.getThumbnail());
         }
     }
     //endregion
@@ -449,11 +445,10 @@ public abstract class VideoPlayerUi extends PlayerUi
     @Override
     public void onThumbnailLoaded(@Nullable final Bitmap bitmap) {
         super.onThumbnailLoaded(bitmap);
-        thumbnail = bitmap;
-        updateEndScreenThumbnail();
+        updateEndScreenThumbnail(bitmap);
     }
 
-    private void updateEndScreenThumbnail() {
+    private void updateEndScreenThumbnail(@Nullable final Bitmap thumbnail) {
         if (thumbnail == null) {
             // remove end screen thumbnail
             binding.endScreen.setImageDrawable(null);
@@ -461,10 +456,11 @@ public abstract class VideoPlayerUi extends PlayerUi
         }
 
         final float endScreenHeight = calculateMaxEndScreenThumbnailHeight(thumbnail);
-        final Bitmap endScreenBitmap = Bitmap.createScaledBitmap(
+        final Bitmap endScreenBitmap = BitmapCompat.createScaledBitmap(
                 thumbnail,
                 (int) (thumbnail.getWidth() / (thumbnail.getHeight() / endScreenHeight)),
                 (int) endScreenHeight,
+                null,
                 true);
 
         if (DEBUG) {

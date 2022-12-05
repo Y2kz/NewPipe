@@ -109,7 +109,7 @@
     <string name="detail_likes_img_view_description">אהבו</string>
     <string name="detail_dislikes_img_view_description">לא אהבו</string>
     <string name="search_no_results">אין תוצאות</string>
-    <string name="empty_subscription_feed_subtitle">אין כאן כלום מלבד צרצרים</string>
+    <string name="empty_list_subtitle">אין כאן כלום מלבד צרצרים</string>
     <string name="video">סרטון</string>
     <string name="audio">שמע</string>
     <string name="retry">ניסיון חוזר</string>
@@ -163,7 +163,7 @@
     <string name="title_activity_about">על אודות NewPipe</string>
     <string name="title_licenses">רישיונות צד שלישי</string>
     <string name="copyright" formatted="true">© %1$s ע״י %2$s תחת %3$s</string>
-    <string name="tab_about">על אודות</string>
+    <string name="tab_about">על אודות ושו״ת</string>
     <string name="tab_licenses">רישיונות</string>
     <string name="app_description">נגן קל וחופשי להזרמת מדיה עבור Android.</string>
     <string name="contribution_title">התנדבות</string>
@@ -364,8 +364,7 @@
     <string name="list">רשימה</string>
     <string name="grid">טבלה</string>
     <string name="auto">אוטומטית</string>
-    <string name="app_update_notification_content_title">יצא עדכון ל־NewPipe!</string>
-    <string name="app_update_notification_content_text">יש לגעת כדי להוריד</string>
+    <string name="app_update_available_notification_title">יצא עדכון ל־NewPipe!</string>
     <string name="missions_header_finished">הסתיים</string>
     <string name="paused">מושהה</string>
     <string name="queued">בתור</string>
@@ -476,7 +475,6 @@
     <string name="new_seek_duration_toast">עקב מגבלות של ExoPlayer מגבלות טווחי החיפוש הוגדרו לכדי %d שניות</string>
     <string name="mute">השתקה</string>
     <string name="unmute">ביטול השתקה</string>
-    <string name="help">עזרה</string>
     <plurals name="minutes">
         <item quantity="one">דקה</item>
         <item quantity="two">שתי דקות</item>
@@ -701,14 +699,14 @@
     <string name="error_report_notification_title">NewPipe נתקל בשגיאה, לחיצה תדווח על כך</string>
     <string name="error_report_notification_toast">אירעה שגיאה, נא לקרוא את ההתראה</string>
     <string name="no_appropriate_file_manager_message">לא נמצא מנהל קבצים מתאים לפעולה זו.
-\nנא להתקין מנהל קבצים או לנסות להשבית את ‚%s’ בהגדרות ההורדה.</string>
+\nנא להתקין מנהל קבצים או לנסות להשבית את ‚%s’ בהגדרות ההורדה</string>
     <string name="error_report_channel_name">התראת דיווח שגיאה</string>
     <string name="no_appropriate_file_manager_message_android_10">לא נמצאו מנהלי קבצים שמתאימים לפעולה הזאת.
-\nנא להתקין מנהל קבצים שתומך בתשתית גישה לאחסון.</string>
+\nנא להתקין מנהל קבצים שתומך בתשתית גישה לאחסון</string>
     <string name="detail_pinned_comment_view_description">הערה ננעצה</string>
     <string name="leak_canary_not_available">LeakCanary אינה זמינה</string>
     <string name="progressive_load_interval_exoplayer_default">ברירת מחדל של ExoPlayer</string>
-    <string name="progressive_load_interval_summary">שינוי גודל מרווח הטעינה (כרגע %s). ערך נמוך יותר עשוי להאיץ את טעינת הווידאו הראשונית. שינויים דורשים את הפעלת הנגן מחדש.</string>
+    <string name="progressive_load_interval_summary">שינוי גודל מרווח הטעינה (כרגע %s). ערך נמוך יותר עשוי להאיץ את טעינת הווידאו הראשונית. שינויים דורשים את הפעלת הנגן מחדש</string>
     <string name="streams_notification_channel_description">התראות על תזרימים חדשים להרשמה</string>
     <string name="streams_notifications_interval_title">תדירות בדיקה</string>
     <string name="streams_notifications_network_title">נדרש חיבור לרשת</string>
@@ -743,5 +741,11 @@
     <string name="select_quality_external_players">בחירת איכות לנגנים חיצוניים</string>
     <string name="unknown_format">תצורה לא מוכרת</string>
     <string name="progressive_load_interval_title">גודל משך טעינת נגינה</string>
-    <string name="feed_toggle_show_future_items">הצגת סרטונים עתידיים</string>
+    <string name="feed_toggle_show_future_items">הצגת פריטים עתידיים</string>
+    <string name="feed_toggle_hide_played_items">הסתרת פריטים במעקב</string>
+    <string name="feed_toggle_hide_future_items">הסתרת פריטים עתידיים</string>
+    <string name="sort">מיון</string>
+    <string name="faq">הצגה באתר</string>
+    <string name="faq_title">תשובות לשאלות נפוצות</string>
+    <string name="faq_description">אם נתקלת בתקלות כשניסית להשתמש ביישומון, כדאי לעיין בתשובות לשאלות הנפוצות!</string>
 </resources>

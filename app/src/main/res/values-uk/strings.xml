@@ -16,7 +16,7 @@
     <string name="download_path_title">Тека для завантаження відео</string>
     <string name="download_path_dialog_title">Виберіть теку для завантаження відеофайлів</string>
     <string name="download_path_audio_dialog_title">Виберіть теку для завантаження аудіофайлів</string>
-    <string name="download_path_summary">Шлях до теки зі завантаженими відео</string>
+    <string name="download_path_summary">Шлях до теки із завантаженими відео</string>
     <string name="download_path_audio_title">Тека для завантаження аудіо</string>
     <string name="download_path_audio_summary">Завантажені аудіофайли зберігаються тут</string>
     <string name="default_resolution_title">Типова роздільність</string>
@@ -194,11 +194,11 @@
     <string name="dismiss">Відхилити</string>
     <string name="rename">Перейменувати</string>
     <string name="title_licenses">Ліцензії третіх сторін</string>
-    <string name="tab_about">Про застосунок</string>
+    <string name="tab_about">Про застосунок і ЧаП</string>
     <string name="app_description">Вільне та легке потокове програвання на Android.</string>
     <string name="contribution_encouragement">Які б не були ваші ідеї: переклад, дизайн, легкий чи глобальний рефакторинг — будь-яка допомога завжди у пригоді. Що більше зроблено, то ліпшим стає NewPipe!</string>
     <string name="settings_category_debug_title">Зневадження</string>
-    <string name="empty_subscription_feed_subtitle">Нічого немає… чути лише цвіркунів</string>
+    <string name="empty_list_subtitle">Нічого немає… чути лише цвіркунів</string>
     <string name="no_views">Немає переглядів</string>
     <plurals name="views">
         <item quantity="one">%s перегляд</item>
@@ -293,7 +293,7 @@
 \n
 \nБажаєте продовжити\?</string>
     <string name="download_thumbnail_title">Завантажувати ескізи</string>
-    <string name="download_thumbnail_summary">Вимкніть для запобігання завантаженню ескізів, що заощадить трафік та внутрішню пам\'ять. Зміни призведуть до очищення кешу зображень</string>
+    <string name="download_thumbnail_summary">Вимкніть для запобігання завантаженню ескізів, що заощадить трафік і внутрішню пам\'ять. Зміни призведуть до очищення кешу зображень</string>
     <string name="thumbnail_cache_wipe_complete_notice">Кеш зображень стерто</string>
     <string name="metadata_cache_wipe_title">Стерти кеш метаданих</string>
     <string name="metadata_cache_wipe_summary">Видалити всі кешовані дані вебсторінок</string>
@@ -362,8 +362,7 @@
     <string name="conferences">Конференції</string>
     <string name="updates_setting_title">Оновлення</string>
     <string name="auto">Автоматично</string>
-    <string name="app_update_notification_content_title">Доступне оновлення NewPipe!</string>
-    <string name="app_update_notification_content_text">Натисніть для завантаження</string>
+    <string name="app_update_available_notification_title">Доступне оновлення NewPipe!</string>
     <string name="missions_header_finished">Завершено</string>
     <string name="missions_header_pending">Очікує</string>
     <string name="paused">призупинено</string>
@@ -405,7 +404,7 @@
     <string name="watch_history_states_deleted">Позиції відтворення видалено</string>
     <string name="missing_file">Файл переміщено або видалено</string>
     <string name="overwrite_failed">не можу перезаписати файл</string>
-    <string name="download_already_pending">Завантаження з такою назвою вже є в черзі</string>
+    <string name="download_already_pending">Завантаження з такою назвою вже додано в чергу</string>
     <string name="error_postprocessing_stopped">NewPipe був закритий під час роботи над файлом</string>
     <string name="error_insufficient_storage">На пристрої не залишилося вільного місця</string>
     <string name="error_progress_lost">Прогрес втрачено через видалення файлу</string>
@@ -485,7 +484,6 @@
     <string name="mute">Вимкнути звук</string>
     <string name="unmute">Увімкнути звук</string>
     <string name="local">Локальне</string>
-    <string name="help">Допомога</string>
     <string name="videos_string">Відео</string>
     <string name="peertube_instance_add_fail">Не вдалося перевірити сервер</string>
     <string name="content_not_supported">NewPipe ще не підтримує цей вміст.
@@ -692,15 +690,15 @@
     <string name="error_report_notification_title">Сталася помилка NewPipe, торкніться, щоб звітувати</string>
     <string name="error_report_notification_toast">Сталася помилка. Перегляньте сповіщення</string>
     <string name="no_appropriate_file_manager_message">Для цієї дії не знайдено відповідного файлового менеджера.
-\nУстановіть файловий менеджер або спробуйте вимкнути «%s» у налаштуваннях завантажень.</string>
+\nУстановіть файловий менеджер або спробуйте вимкнути «%s» у налаштуваннях завантажень</string>
     <string name="no_appropriate_file_manager_message_android_10">Для цієї дії не знайдено відповідного файлового менеджера.
-\nУстановіть файловий менеджер, сумісний зі Storage Access Framework.</string>
+\nУстановіть файловий менеджер, сумісний зі Storage Access Framework</string>
     <string name="show_error_snackbar">Показати панель помилок</string>
     <string name="create_error_notification">Створити сповіщення про помилку</string>
     <string name="detail_pinned_comment_view_description">Закріплений коментар</string>
     <string name="leak_canary_not_available">LeakCanary недоступний</string>
     <string name="progressive_load_interval_exoplayer_default">Типовий ExoPlayer</string>
-    <string name="progressive_load_interval_summary">Змінити розмір інтервалу завантаження (наразі %s). Менше значення може прискорити початкове завантаження відео. Зміни вимагають перезапуску програвача.</string>
+    <string name="progressive_load_interval_summary">Змінити розмір інтервалу завантаження (наразі %s). Менше значення може прискорити початкове завантаження відео. Зміни вимагають перезапуску програвача</string>
     <string name="you_successfully_subscribed">Ви підписалися на цей канал</string>
     <string name="enumeration_comma">,</string>
     <string name="streams_notification_channel_description">Сповіщення про нові трансляції для підписок</string>
@@ -734,5 +732,11 @@
     <string name="select_quality_external_players">Виберіть якість для зовнішніх програвачів</string>
     <string name="unknown_quality">Невідома якість</string>
     <string name="progressive_load_interval_title">Розмір інтервалу завантаження відтворення</string>
-    <string name="feed_toggle_show_future_items">Показати наступні відео</string>
+    <string name="feed_toggle_show_future_items">Показати наступні елементи</string>
+    <string name="feed_toggle_hide_played_items">Сховати переглянуті елементи</string>
+    <string name="feed_toggle_hide_future_items">Сховати майбутні елементи</string>
+    <string name="faq">Переглянути на сайті</string>
+    <string name="faq_title">Поширені запитання</string>
+    <string name="faq_description">Якщо у вас виникли проблеми з використанням застосунку, обов\'язково ознайомтеся з відповідями на поширені запитання!</string>
+    <string name="sort">Сортувати</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="upload_date_text">Gepubliceerd op %1$s</string>
-    <string name="no_player_found">Geen speler met streamondersteuning gevonden. VLC installeren\?</string>
+    <string name="no_player_found">Geen videospeler met streamondersteuning gevonden. VLC installeren\?</string>
     <string name="install">Installeren</string>
     <string name="cancel">Annuleren</string>
     <string name="open_in_browser">Openen in browser</string>
@@ -121,7 +121,7 @@
     <string name="settings_file_replacement_character_summary">Ongeldige tekens worden vervangen door deze waarde</string>
     <string name="settings_file_replacement_character_title">Vervangend teken</string>
     <string name="charset_letters_and_digits">Letters en cijfers</string>
-    <string name="charset_most_special_characters">Speciaalste tekens</string>
+    <string name="charset_most_special_characters">Speciale tekens</string>
     <string name="subscribe_button_title">Abonneren</string>
     <string name="subscribed_button_title">Geabonneerd</string>
     <string name="channel_unsubscribed">Abonnement opgezegd</string>
@@ -144,7 +144,7 @@
     <string name="settings_category_history_title">Geschiedenis en cache</string>
     <string name="undo">Ongedaan maken</string>
     <string name="search_no_results">Geen resultaten</string>
-    <string name="empty_subscription_feed_subtitle">Niets, maar dan ook niets te zien</string>
+    <string name="empty_list_subtitle">Niets, maar dan ook niets te zien</string>
     <string name="no_subscribers">Geen abonnees</string>
     <plurals name="subscribers">
         <item quantity="one">%s abonnee</item>
@@ -237,7 +237,7 @@
     <string name="playlist_creation_success">Afspeellijst gecreëerd</string>
     <string name="playlist_add_stream_success">Toegevoegd aan afspeellijst</string>
     <string name="playlist_thumbnail_change_success">Miniatuur voor afspeellijst gewijzigd.</string>
-    <string name="caption_none">Geen bijschriften</string>
+    <string name="caption_none">Geen ondertitels</string>
     <string name="resize_fit">Inpassen</string>
     <string name="resize_fill">Opvullen</string>
     <string name="resize_zoom">Inzoomen</string>
@@ -297,8 +297,8 @@
     <string name="preferred_open_action_settings_title">Voorkeursactie voor openen</string>
     <string name="preferred_open_action_settings_summary">Standaardactie bij openen van inhoud — %s</string>
     <string name="no_streams_available_download">Geen streams beschikbaar voor downloaden</string>
-    <string name="caption_setting_title">Bijschriften</string>
-    <string name="caption_setting_description">Bijschriftgrootte en -achtergrondstijlen wijzigen. Vereist een herstart van de app</string>
+    <string name="caption_setting_title">Ondertitels</string>
+    <string name="caption_setting_description">Ondertitelgrootte en -achtergrondstijlen wijzigen. Vereist een herstart van de app</string>
     <string name="toast_no_player">Er is geen app geïnstalleerd die dit bestand kan afspelen</string>
     <string name="clear_views_history_title">Kijkgeschiedenis wissen</string>
     <string name="clear_views_history_summary">Verwijdert de geschiedenis van bekeken video\'s en afspeelposities</string>
@@ -356,8 +356,7 @@
     <string name="list">Lijst</string>
     <string name="grid">Raster</string>
     <string name="auto">Auto</string>
-    <string name="app_update_notification_content_title">NewPipe-update is beschikbaar!</string>
-    <string name="app_update_notification_content_text">Tik om te downloaden</string>
+    <string name="app_update_available_notification_title">NewPipe-update is beschikbaar!</string>
     <string name="missions_header_finished">Voltooid</string>
     <string name="missions_header_pending">In afwachting van</string>
     <string name="paused">gepauzeerd</string>
@@ -457,7 +456,6 @@
     <string name="new_seek_duration_toast">Door beperkingen van ExoPlayer is de zoekduur ingesteld op %d seconden</string>
     <string name="mute">Geluid dempen</string>
     <string name="unmute">Geluid aanzetten</string>
-    <string name="help">Hulp</string>
     <plurals name="seconds">
         <item quantity="one">%d seconde</item>
         <item quantity="other">%d seconden</item>
@@ -559,7 +557,7 @@
     <string name="notification_action_2_title">Derde actieknop</string>
     <string name="notification_action_1_title">Tweede actieknop</string>
     <string name="notification_action_0_title">Eerste actieknop</string>
-    <string name="notification_scale_to_square_image_summary">Schaal de miniatuurafbeelding van de video die getoond wordt in de notificatie van verhouding 16:9 naar 1:1 (dit kan vervorming creëren)</string>
+    <string name="notification_scale_to_square_image_summary">Schaal de miniatuurafbeelding van de video die getoond wordt in de notificatie van verhouding 16:9 naar 1:1</string>
     <string name="notification_scale_to_square_image_title">Schaal de miniatuurafbeelding tot verhouding 1:1</string>
     <string name="auto_queue_toggle">Automatisch in de wachtrij plaatsen</string>
     <string name="show_memory_leaks">Toon memory leaks</string>
@@ -678,12 +676,12 @@
     <string name="create_error_notification">Maak een foutmelding</string>
     <string name="show_error_snackbar">Korte foutmelding weergeven</string>
     <string name="no_appropriate_file_manager_message">Er is geen geschikte bestandsbeheerder gevonden voor deze actie.
-\nInstalleer een bestandsbeheerder of probeer \'%s\' uit te schakelen in de download instellingen.</string>
+\nInstalleer een bestandsbeheerder of probeer \'%s\' uit te schakelen in de download instellingen</string>
     <string name="no_appropriate_file_manager_message_android_10">Er is geen geschikte bestandsbeheerder gevonden voor deze actie.
-\nInstalleer een bestandsbeheerder die compatibel is met het Storage Access Framework.</string>
+\nInstalleer een bestandsbeheerder die compatibel is met het Storage Access Framework</string>
     <string name="detail_pinned_comment_view_description">Vastgemaakt commentaar</string>
     <string name="leak_canary_not_available">LeakCanary is niet beschikbaar</string>
-    <string name="progressive_load_interval_summary">Verander de laad interval tijd (nu %s). Een lagere waarde kan het initiële laden van de video versnellen. De wijziging vereist een herstart van de speler.</string>
+    <string name="progressive_load_interval_summary">Verander de laad interval tijd (nu %s). Een lagere waarde kan het initiële laden van de video versnellen. De wijziging vereist een herstart van de speler</string>
     <string name="progressive_load_interval_exoplayer_default">ExoPlayer standaard</string>
     <string name="settings_category_player_notification_title">Speler melding</string>
     <string name="settings_category_player_notification_summary">Configureer meldingen van de huidige spelende stream</string>
@@ -709,12 +707,18 @@
     </plurals>
     <string name="you_successfully_subscribed">Je bent nu geabonneerd op dit kanaal</string>
     <string name="delete_downloaded_files_confirm">Alle gedownloade bestanden van schijf wissen\?</string>
-    <string name="selected_stream_external_player_not_supported">De gekozen stream wordt niet ondersteund door externe spelers</string>
+    <string name="selected_stream_external_player_not_supported">De geselecteerde stream wordt niet ondersteund door externe spelers</string>
     <string name="no_video_streams_available_for_external_players">Er zijn geen videostreams beschikbaar voor externe spelers</string>
     <string name="unknown_quality">Onbekende kwaliteit</string>
-    <string name="streams_not_yet_supported_removed">Streams die nog niet kunnen worden opgeslagen, worden niet getoond</string>
-    <string name="no_audio_streams_available_for_external_players">Geen audiostreams beschikbaar voor externe spelers</string>
-    <string name="select_quality_external_players">Kies kwaliteit voor externe spelers</string>
-    <string name="unknown_format">Onbekend bestandstype</string>
+    <string name="streams_not_yet_supported_removed">Streams die niet ondersteund worden door de downloader, worden niet getoond</string>
+    <string name="no_audio_streams_available_for_external_players">Er zijn geen geluidsstreams beschikbaar voor externe spelers</string>
+    <string name="select_quality_external_players">Selecteer kwaliteit voor externe spelers</string>
+    <string name="unknown_format">Onbekend formaat</string>
     <string name="progressive_load_interval_title">Intervalgrootte tijdens afspelen</string>
+    <string name="feed_toggle_show_future_items">Toon toekomstige objecten</string>
+    <string name="feed_toggle_hide_played_items">Verberg bekeken objecten</string>
+    <string name="feed_toggle_hide_future_items">Verberg toekomstige objecten</string>
+    <string name="faq_title">Veelgestelde vragen</string>
+    <string name="faq_description">Als u problemen ondervindt bij het gebruik van de app, bekijk dan deze antwoorden op veelgestelde vragen!</string>
+    <string name="faq">Bekijk op de website</string>
 </resources>

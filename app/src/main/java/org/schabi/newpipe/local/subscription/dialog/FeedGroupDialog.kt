@@ -35,7 +35,7 @@ import org.schabi.newpipe.local.subscription.dialog.FeedGroupDialog.ScreenState.
 import org.schabi.newpipe.local.subscription.dialog.FeedGroupDialog.ScreenState.SubscriptionsPickerScreen
 import org.schabi.newpipe.local.subscription.dialog.FeedGroupDialogViewModel.DialogEvent.ProcessingEvent
 import org.schabi.newpipe.local.subscription.dialog.FeedGroupDialogViewModel.DialogEvent.SuccessEvent
-import org.schabi.newpipe.local.subscription.item.EmptyPlaceholderItem
+import org.schabi.newpipe.local.subscription.item.ImportSubscriptionsHintPlaceholderItem
 import org.schabi.newpipe.local.subscription.item.PickerIconItem
 import org.schabi.newpipe.local.subscription.item.PickerSubscriptionItem
 import org.schabi.newpipe.util.DeviceUtils
@@ -124,11 +124,13 @@ class FeedGroupDialog : DialogFragment(), BackPressable {
 
         viewModel = ViewModelProvider(
             this,
-            FeedGroupDialogViewModel.Factory(
+            FeedGroupDialogViewModel.getFactory(
                 requireContext(),
-                groupId, subscriptionsCurrentSearchQuery, subscriptionsShowOnlyUngrouped
+                groupId,
+                subscriptionsCurrentSearchQuery,
+                subscriptionsShowOnlyUngrouped
             )
-        ).get(FeedGroupDialogViewModel::class.java)
+        )[FeedGroupDialogViewModel::class.java]
 
         viewModel.groupLiveData.observe(viewLifecycleOwner, Observer(::handleGroup))
         viewModel.subscriptionsLiveData.observe(viewLifecycleOwner) {
@@ -336,7 +338,7 @@ class FeedGroupDialog : DialogFragment(), BackPressable {
 
         if (subscriptions.isEmpty()) {
             subscriptionEmptyFooter.clear()
-            subscriptionEmptyFooter.add(EmptyPlaceholderItem())
+            subscriptionEmptyFooter.add(ImportSubscriptionsHintPlaceholderItem())
         } else {
             subscriptionEmptyFooter.clear()
         }

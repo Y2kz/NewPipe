@@ -289,7 +289,6 @@
     <string name="list">Liste</string>
     <string name="grid">Gitter</string>
     <string name="auto">Automatisk</string>
-    <string name="app_update_notification_content_text">Tryk for at downloade</string>
     <string name="missions_header_finished">Færdig</string>
     <string name="missions_header_pending">Afventning</string>
     <string name="post_processing">efterbehandling</string>
@@ -313,7 +312,7 @@
     <string name="error_postprocessing_failed">Efterbehandling fejlede</string>
     <string name="stop">Stop</string>
     <string name="events">Hændelser</string>
-    <string name="empty_subscription_feed_subtitle">Intet at se her</string>
+    <string name="empty_list_subtitle">Intet at se her</string>
     <string name="short_thousand">t</string>
     <string name="short_million">mio.</string>
     <string name="short_billion">mia.</string>
@@ -369,7 +368,7 @@
     <string name="minimize_on_exit_none_description">Ingen</string>
     <string name="minimize_on_exit_background_description">Minimer til baggrundsafspiller</string>
     <string name="minimize_on_exit_popup_description">Minimer til pop op-afspiller</string>
-    <string name="app_update_notification_content_title">En NewPipe-opdatering er tilgængelig!</string>
+    <string name="app_update_available_notification_title">En NewPipe-opdatering er tilgængelig!</string>
     <string name="paused">sat på pause</string>
     <string name="queued">sat i kø</string>
     <string name="max_retry_msg">Maksimalt antal genforsøg</string>
@@ -405,7 +404,6 @@
     <string name="description_tab_description">Beskrivelse</string>
     <string name="chapters">Kapitler</string>
     <string name="notifications">Notifikationer</string>
-    <string name="help">Hjælp</string>
     <string name="artists">Kunstnere</string>
     <string name="close">Luk</string>
     <string name="radio">Radio</string>
@@ -555,7 +553,7 @@
     <string name="feed_update_threshold_option_always_update">Altid opdater</string>
     <string name="feed_group_dialog_select_subscriptions">Vælg abonnementer</string>
     <string name="feed_toggle_show_played_items">Vis sete elementer</string>
-    <string name="georestricted_content">Dette indhold er ikke tilgængeligt i dit land</string>
+    <string name="georestricted_content">Dette indhold er ikke tilgængeligt i dit land.</string>
     <string name="video_detail_by">Af %s</string>
     <string name="remove_watched_popup_warning">Videoer på playlisten som allerede er blevet set fjernes.
 \nDette kan ikke fortrydes!</string>
@@ -653,4 +651,6 @@
     <string name="show_crash_the_player_title">Vis \"crash afspilleren\"</string>
     <string name="crash_the_app">Crash appen</string>
     <string name="show_crash_the_player_summary">Vis et crash alternativ når afspilleren er i brug</string>
+    <string name="show_error_snackbar">Vis en fejl snackbar</string>
+    <string name="downloads_storage_use_saf_title">Brug system mappevælger (SAF)</string>
 </resources>

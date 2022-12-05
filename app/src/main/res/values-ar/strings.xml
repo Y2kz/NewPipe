@@ -23,7 +23,7 @@
     <string name="light_theme_title">فاتح</string>
     <string name="network_error">خطأ في الشبكة</string>
     <string name="no_player_found">لم يتم العثور على مشغل بث. تثبيت VLC؟</string>
-    <string name="open_in_browser">فتح في المتصفح</string>
+    <string name="open_in_browser">فتح في متصفح الويب</string>
     <string name="play_audio">الصوت</string>
     <string name="play_with_kodi_title">تشغيل بواسطة كودي</string>
     <string name="search">البحث</string>
@@ -61,7 +61,7 @@
     <string name="all">الجميع</string>
     <string name="video">الفيديو</string>
     <string name="settings_category_downloads_title">التنزيل</string>
-    <string name="tab_about">عن التطبيق</string>
+    <string name="tab_about">حول التطبيق &amp; الأسئلة الشائعة</string>
     <string name="title_activity_history">التاريخ</string>
     <string name="action_history">التاريخ</string>
     <string name="open_in_popup_mode">فتح في وضع منبثق</string>
@@ -114,7 +114,7 @@
     <string name="your_comment">تعليقك (باللغة الإنجليزية):</string>
     <string name="error_details_headline">التفاصيل:</string>
     <string name="search_no_results">لم يتم العثور على نتائج</string>
-    <string name="empty_subscription_feed_subtitle">لا شيء هنا سوى الصراصير</string>
+    <string name="empty_list_subtitle">لا شيء هنا سوى الصراصير</string>
     <string name="audio">الصوت</string>
     <string name="retry">إعادة المحاولة</string>
     <string name="short_thousand">ألف</string>
@@ -370,8 +370,7 @@
     <string name="list">القائمة</string>
     <string name="grid">الشبكة</string>
     <string name="auto">تلقائي</string>
-    <string name="app_update_notification_content_title">تحديث NewPipe متاح!</string>
-    <string name="app_update_notification_content_text">اضغط لتنزيل</string>
+    <string name="app_update_available_notification_title">تحديث NewPipe متاح!</string>
     <string name="missions_header_finished">انتهى</string>
     <string name="missions_header_pending">ريثما</string>
     <string name="paused">متوقف</string>
@@ -549,7 +548,6 @@
     <string name="new_seek_duration_toast">نظرا لقيود مشغل ExoPlayer مدة التقديم تم ضبطها الى %d ثانية</string>
     <string name="unmute">إلغاء كتم الصوت</string>
     <string name="mute">كتم الصوت</string>
-    <string name="help">مساعدة</string>
     <string name="content_not_supported">هذا المحتوى ليس مدعومًا من قبل NewPipe.
 \n
 \nنأمل أن يكون مدعومًا في التحديثات القادمة.</string>
@@ -725,14 +723,14 @@
     <string name="error_report_notification_toast">حدث خطأ، انظر للإشعار</string>
     <string name="create_error_notification">قم بإنشاء تنبيه بالخطأ</string>
     <string name="no_appropriate_file_manager_message">لم يتم العثور على مدير ملفات مناسب لهذا الإجراء.
-\nالرجاء تثبيت مدير ملفات أو محاولة تعطيل \"%s\" في إعدادات التنزيل.</string>
+\nيرجى تثبيت مدير ملفات أو محاولة تعطيل \"%s\" في إعدادات التنزيل</string>
     <string name="show_error_snackbar">إظهار خطأ snackbar</string>
     <string name="no_appropriate_file_manager_message_android_10">لم يتم العثور على مدير ملفات مناسب لهذا الإجراء.
-\nالرجاء تثبيت مدير ملفات متوافق مع Storage Access Framework.</string>
+\nالرجاء تثبيت مدير ملفات متوافق مع إطار عمل الوصول إلى التخزين</string>
     <string name="detail_pinned_comment_view_description">تعليق مثبت</string>
     <string name="leak_canary_not_available">LeakCanary غير متوفر</string>
     <string name="progressive_load_interval_exoplayer_default">الافتراضي ExoPlayer</string>
-    <string name="progressive_load_interval_summary">تغيير حجم الفاصل الزمني للتحميل (حاليا %s). قد تؤدي القيمة الأقل إلى تسريع تحميل الفيديو الأولي. تتطلب التغييرات إعادة تشغيل المشغل.</string>
+    <string name="progressive_load_interval_summary">تغيير حجم الفاصل الزمني للتحميل (حاليا %s). قد تؤدي القيمة الأقل إلى تسريع تحميل الفيديو الأولي. تتطلب التغييرات إعادة تشغيل المشغل</string>
     <string name="settings_category_player_notification_summary">تكوين إشعار مشغل البث الحالي</string>
     <string name="notifications">الإشعارات</string>
     <string name="loading_stream_details">تحميل تفاصيل البث…</string>
@@ -769,5 +767,11 @@
     <string name="unknown_format">تنسيق غير معروف</string>
     <string name="unknown_quality">جودة غير معروفة</string>
     <string name="progressive_load_interval_title">حجم الفاصل الزمني لتحميل التشغيل</string>
-    <string name="feed_toggle_show_future_items">عرض مقاطع الفيديو المستقبلية</string>
+    <string name="feed_toggle_show_future_items">عرض العناصر المستقبلية</string>
+    <string name="feed_toggle_hide_future_items">إخفاء العناصر المستقبلية</string>
+    <string name="feed_toggle_hide_played_items">إخفاء العناصر التي تمت مشاهدتها</string>
+    <string name="faq_title">أسئلة مكررة</string>
+    <string name="faq_description">إذا كنت تواجه مشكلة في استخدام التطبيق ، فتأكد من مراجعة هذه الإجابات للأسئلة الشائعة!</string>
+    <string name="faq">مشاهدة على الموقع</string>
+    <string name="sort">فرز</string>
 </resources>

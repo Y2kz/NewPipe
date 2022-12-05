@@ -41,7 +41,7 @@
     <string name="settings_category_player_title">播放器</string>
     <string name="settings_category_history_title">历史记录与缓存</string>
     <string name="undo">撤销</string>
-    <string name="play_all">全部播放</string>
+    <string name="play_all">播放全部</string>
     <string name="always">总是</string>
     <string name="just_once">仅一次</string>
     <string name="controls_add_to_playlist_title">添加至</string>
@@ -59,7 +59,7 @@
     <string name="subscribers_count_not_available">无法得知订阅人数</string>
     <string name="updates_setting_description">有新版本时，显示通知提示更新应用</string>
     <string name="grid">网格</string>
-    <string name="app_update_notification_content_title">NewPipe 可更新！</string>
+    <string name="app_update_available_notification_title">NewPipe 可更新！</string>
     <string name="error_http_unsupported_range">服务器不接受多线程下载, 使用 @string/msg_threads = 1 重试</string>
     <string name="autoplay_title">自动播放</string>
     <string name="settings_category_clear_data_title">清空数据</string>
@@ -89,7 +89,7 @@
     <string name="title_activity_about">关于 NewPipe</string>
     <string name="title_licenses">第三方许可</string>
     <string name="copyright" formatted="true">© %1$s 由 %2$s 遵循 %3$s 协议发布</string>
-    <string name="tab_about">关于</string>
+    <string name="tab_about">关于和常见问题</string>
     <string name="tab_licenses">许可证</string>
     <string name="settings_category_downloads_title">下载</string>
     <string name="settings_file_charset_title">文件名中允许的字符</string>
@@ -196,7 +196,7 @@
     <string name="notification_channel_description">NewPipe 播放器的通知</string>
     <string name="default_video_format_title">默认视频格式</string>
     <string name="settings_category_player_behavior_title">行为</string>
-    <string name="empty_subscription_feed_subtitle">空空如也</string>
+    <string name="empty_list_subtitle">空空如也</string>
     <string name="no_views">无人观看过</string>
     <string name="delete_item_search_history">是否删除此条搜索历史记录？</string>
     <string name="main_page_content">主页面的显示内容</string>
@@ -366,7 +366,6 @@
     <string name="updates_setting_title">更新</string>
     <string name="list">列表</string>
     <string name="auto">自动</string>
-    <string name="app_update_notification_content_text">点击下载</string>
     <string name="post_processing">处理中</string>
     <string name="generate_unique_name">生成唯一名称</string>
     <string name="overwrite">覆盖</string>
@@ -458,7 +457,6 @@
     <string name="new_seek_duration_toast">由于 ExoPlayer 的限制，寻址间隔置为 %d 秒</string>
     <string name="mute">静音</string>
     <string name="unmute">取消静音</string>
-    <string name="help">帮助</string>
     <plurals name="minutes">
         <item quantity="other">%d 分钟</item>
     </plurals>
@@ -665,13 +663,13 @@
     <string name="show_error_snackbar">显示错误警示SnackBar</string>
     <string name="create_error_notification">创建一条错误通知</string>
     <string name="no_appropriate_file_manager_message">找不到适合此操作的文件管理器。
-\n请安装一文件管理器或尝试在下载设置中禁用“%s”。</string>
+\n请安装一文件管理器或尝试在下载设置中禁用“%s”</string>
     <string name="no_appropriate_file_manager_message_android_10">找不到适合此操作的文件管理器。
-\n请安装与存储访问框架(SAF)兼容的文件管理器。</string>
+\n请安装兼容存储访问框架(SAF)的文件管理器</string>
     <string name="error_report_notification_title">NewPipe 遇到了一个错误，点击此处报告此错误</string>
     <string name="detail_pinned_comment_view_description">置顶评论</string>
     <string name="leak_canary_not_available">LeakCanary 不可用</string>
-    <string name="progressive_load_interval_summary">更改加载间隔的大小（当前为 %s），较低的值可以加快视频的首次加载速度。更改需要重启播放器。</string>
+    <string name="progressive_load_interval_summary">更改加载间隔的大小（当前为 %s），较低的值可以加快视频的首次加载速度。更改需要重启播放器</string>
     <string name="progressive_load_interval_exoplayer_default">ExoPlayer 默认</string>
     <string name="settings_category_player_notification_summary">配置当前正在播放的串流的通知</string>
     <string name="enable_streams_notifications_title">新串流通知</string>
@@ -685,8 +683,7 @@
     <string name="notifications">通知</string>
     <string name="streams_notification_channel_name">新的串流</string>
     <plurals name="new_streams">
-        <item quantity="one">%s 条新串流</item>
-        <item quantity="other"/>
+        <item quantity="other">%s 个新音视频流</item>
     </plurals>
     <string name="streams_notification_channel_description">被订阅的新串流的通知</string>
     <string name="loading_stream_details">正在加载串流详情…</string>
@@ -704,6 +701,12 @@
     <string name="no_video_streams_available_for_external_players">没有视频流可用于外部播放器</string>
     <string name="streams_not_yet_supported_removed">不显示下载器尚不支持的串流</string>
     <string name="unknown_quality">未知画质</string>
-    <string name="progressive_load_interval_title">回放加载间隔大小</string>
-    <string name="feed_toggle_show_future_items">显示未来视频</string>
+    <string name="progressive_load_interval_title">播放加载间隔大小</string>
+    <string name="feed_toggle_show_future_items">显示未来项目</string>
+    <string name="feed_toggle_hide_played_items">隐藏看过的项目</string>
+    <string name="feed_toggle_hide_future_items">隐藏未来项目</string>
+    <string name="faq_title">常见问题</string>
+    <string name="faq_description">如果你在使用本应用时遇到问题，请务必查看这些常见问题的答案！</string>
+    <string name="faq">在网站上查看</string>
+    <string name="sort">排序</string>
 </resources>
