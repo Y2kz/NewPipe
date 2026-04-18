@@ -1144,7 +1144,13 @@ public final class VideoDetailFragment
     public void openVideoPlayerAutoFullscreen() {
         openVideoPlayer(PlayerHelper.isStartMainPlayerFullscreenEnabled(requireContext()));
     }
-
+   
+    //return the URL of the stream currently handled by this fragment.
+    @Nullable
+    public String getUrl() {
+        return url;
+    }
+	
     private void openNormalBackgroundPlayer(final boolean append) {
         // See UI changes while remote playQueue changes
         if (!isPlayerAvailable()) {
